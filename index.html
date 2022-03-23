@@ -1,0 +1,105 @@
+<!DOCTYPE html>	
+<html>
+<head>
+<title>Apps</title>
+<link rel="stylesheet" href="https://kasar.store/main.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover minimal-ui standalone">
+<link rel="manifest" href="manifest.json">
+<meta name="description" content="Kasar Is A Tweaked AppStore For iOS Devices">
+<link rel="apple-touch-startup-image" href="https://kasar.store/Kasaricon.png">
+<link rel='icon' href='Kasaricon.png' type='image/x-icon'/ >
+<link rel="apple-touch-icon" href="https://kasar.store/Kasaricon.png"/>
+<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<center>
+<a href="https://kasar.store">
+<div class="name">
+<h1>Apps</h1>
+</div>
+</a>
+<br>
+<br>
+<br>
+<div class="search">
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search">
+</div>
+</center>
+<center>
+<ul id="myUL">
+<li>
+<a href="itms-services://?action=download-manifest&url=https://kasar.store/plist/iPoGo.plist">
+<div class="apps">
+<img src="https://icons.kasar.store/iPogo.png">
+<h1>iPoGo</h1>
+</div>
+</a>
+</li>
+<li>
+<a href="itms-services://?action=download-manifest&amp;url=https://kasar.store/plist/8BallPool.plist">
+<div class="apps">
+<img src="https://icons.kasar.store/8BallPoolI.png">
+<h1>8 Ball Pool</h1>
+</div>
+</a>
+</li>
+<li>
+<a href="itms-services://?action=download-manifest&url=https://kasar.store/plist/unc0ver.plist">
+<div class="apps">
+<img src="https://icons.kasar.store/Unc0ver.png">
+<h1>Unc0ver</h1>
+</div>
+</a>
+</li>
+<li>
+<a href="itms-services://?action=download-manifest&amp;url=https://kasar.store/plist/PPSSPP.plist">
+<div class="apps">
+<img src="https://icons.kasar.store/PPSSPP.png">
+<h1>PPSSPP</h1>
+</div>
+</a>
+</li>
+<li>
+<a href="itms-services://?action=download-manifest&amp;url=https://kasar.store/plist/VideoStar.plist">
+<div class="apps">
+<img src="https://icons.kasar.store/VideoStar.png">
+<h1>VideoStar++</h1>
+</div>
+</a>
+</li>
+<li>
+<a href="soon">
+<div class="apps">
+<img src="https://icons.kasar.store/Pubg.png">
+<h1>PUBG MOBILE</h1>
+</div>
+</a>
+</li>
+</ul>
+</center>
+<br>
+<br>
+<br>
+<br>
+<br>
+<script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, div, h1, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    h1 = li[i].getElementsByTagName("h1")[0];
+    txtValue = h1.textContent || h1.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+</html>
